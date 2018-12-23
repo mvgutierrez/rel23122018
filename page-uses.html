@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui, viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<title>Grecia 240</title>
+
+<link href="styles/style.css"           rel="stylesheet" type="text/css">
+<link href="styles/framework.css"       rel="stylesheet" type="text/css">
+<link href="styles/font-awesome.css"    rel="stylesheet" type="text/css">
+<link href="styles/animate.css"         rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jqueryui.js"></script>
+<script type="text/javascript" src="scripts/framework-plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/config.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+            $.ajax({
+                type: 'GET',
+                url: URL + '/readEmergencies.php',
+                data: {test: '1'},
+                success: function(data)
+                {
+                    if(data == "No es posible obtener los elementos del menú, verifique su conexión a internet."){
+                        document.getElementById("alertMessage").innerHTML = data;
+                        $('.simple-modal-content').modal();
+                    }
+                    else{
+                        $('#addEmergencies').html(data);
+                    }
+                },
+                error: function(data){
+                    document.getElementById("alertMessage").innerHTML = "No es posible obtener los elementos del menú, verifique su conexión a internet.";
+                    $('.simple-modal-content').modal();
+                }
+            });
+        });
+</script>
+
+</head>
+
+<body class="left-sidebar"> 
+
+    
+<div class="gallery-fix"></div> <!-- Important for all pages that have galleries or portfolios -->
+    
+<div id="header-fixed" class="header-style-1">
+    <a class="header-1-0 open-left-sidebar" href="#"><i class="fa fa-navicon"></i></a>
+    <a class="header-1" href="javascript:history.back()"><i class="fa fa-chevron-left"></i></a>
+    <a class="header-logo" href="#"><img src="images/logo-dark2.png" alt="img"></a>
+    <a class="header-2 open-right-sidebar" href="pageapp-login.html"><i class="fa fa-comments"></i></a>
+</div>
+
+<div id="header-fixed" class="header-style-1">
+    <a class="header-1-0 open-left-sidebar" href="#"><i class="fa fa-navicon"></i></a>
+    <a class="header-1" href="javascript:history.back()"><i class="fa fa-chevron-left"></i></a>
+    <a class="header-logo" href="#"><img src="images/logo-dark2.png" alt="img"></a>
+    <a class="header-2 open-right-sidebar" href="pageapp-login.html"><i class="fa fa-comments"></i></a>
+</div>
+
+<div id="statusbar-space"></div>
+    
+            
+<div class="all-elements">
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left">        
+            <div class="sidebar-menu">
+                <a class="menu-item" href="gallery-square.html">
+                    <i class="fa fa-home"></i>
+                    <em>Inicio</em>
+                    <i class="fa fa-circle"></i>
+                </a> <a class="menu-item" href="search.html">
+                    <i class="fa fa-search"></i>
+                    <em>B&uacute;squeda</em>
+                    <i class="fa fa-circle"></i>
+                    </a> 
+                     <a class="menu-item" href="page-near-me.html">
+                    <i class="fa fa-location-arrow"></i>
+                    <em>Cerca de m&iacute;</em>
+                    <i class="fa fa-circle"></i>
+                </a> <a class="menu-item" href="page-bus.html">
+                    <i class="fa fa-bus"></i>
+                    <em>Horarios de buses</em>
+                    <i class="fa fa-circle"></i>
+                </a>
+                <a class="menu-item" href="page-misa.html">
+                    <i class="fa fa-fa fa-clock-o"></i>
+                    <em>Horarios de misas</em>
+                    <i class="fa fa-circle"></i>
+                </a> </div>
+            
+            <div class="container no-bottom">
+                <div class="sidebar-form contact-form no-bottom">        
+                            <div class="formSubmitButtonErrorsWrap">
+                                <input type="button" class="buttonWrap button button-yellow contactSubmitButton" value="PROMOCIONES" onClick="window.location='index.html'"/>
+                            </div>   <div class="formSubmitButtonErrorsWrap">
+                                <input type="button" class="buttonWrap button button-yellow contactSubmitButton" value="ACTIVIDADES" onClick="window.location='page-calendar.html'"/>
+                            </div>
+                               
+                </div>
+            </div>
+            
+            <p class="sidebar-divider">Directorio</p>
+            
+            <div class="sidebar-menu">                                
+                <a class="menu-item" href="page-uses.html">
+                    <i class="fa fa-ambulance"></i>
+                    <em>Emergencias</em>
+                </a>
+                 <a class="menu-item" href="page-uses-comer.html?tipo=ASADAS&clase=fa fa-tint">
+                    <i class="fa fa-tint"></i>
+                    <em>ASADAS</em>
+                </a>
+                
+                <a class="menu-item" href="page-uses-comer.html?tipo=Bancos y financieras&clase=fa fa-money">
+                    <i class="fa fa-money"></i>
+                    <em>Bancos y financieras</em>
+                </a> 
+                <a class="menu-item" href="page-uses-comer.html?tipo=Bien social&clase=fa fa-globe">
+                    <i class="fa fa-globe"></i>
+                    <em>Bien social</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Bienes raíces&clase=fa fa-building">
+                    <i class="fa fa-building"></i>
+                    <em>Bienes ra&iacute;ces</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Cajeros automáticos&clase=fa fa-credit-card">
+                        <i class="fa fa-credit-card"></i>
+                        <em>Cajeros automáticos</em>
+                    </a>
+
+<a class="menu-item" href="page-uses-comer.html?tipo=Cementerios y funerarias&clase=fa fa-leaf">
+                        <i class="fa fa-leaf"></i>
+                        <em>Cementerios y funerarias</em>
+                    </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Centros turísticos&clase=fa fa-tree">
+                    <i class="fa fa-tree"></i>
+                    <em>Centros tur&iacute;sticos</em>
+                </a>
+                <a class="menu-item" href="gallery-square.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <em>Comercios</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Deportes y recreación&clase=fa fa-futbol-o">
+                    <i class="fa fa-futbol-o"></i>
+                    <em>Deportes y recreaci&oacute;n</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Educación&clase=fa fa-book">
+                    <i class="fa fa-book"></i>
+                    <em>Educaci&oacute;n</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Ferias&clase=fa fa-info">
+                    <i class="fa fa-info"></i>
+                    <em>Ferias</em>
+                </a>   
+                <a class="menu-item" href="page-uses-comer.html?tipo=Gubernamentales&clase=fa fa-university">
+                    <i class="fa fa-university"></i>
+                    <em>Gubernamentales</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Juntas y comités&clase=fa fa-users">
+                    <i class="fa fa-users"></i>
+                    <em>Juntas y comit&eacute;s</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Música y animación&clase=fa fa-music">
+                    <i class="fa fa-music"></i>
+                    <em>M&uacute;sica y animaci&oacute;n</em>
+                </a> 
+
+<a class="menu-item" href="page-uses-comer.html?tipo=Parquímetros&clase=fa fa-car">
+                    <i class="fa fa-car"></i>
+                    <em>Parquímetros</em>
+                </a> <a class="menu-item" href="page-uses-comer.html?tipo=Quintas y salones&clase=fa fa-birthday-cake">
+                    <i class="fa fa-birthday-cake"></i>
+                    <em>Quintas y salones</em>
+                </a> 
+                <a class="menu-item" href="page-uses-comer.html?tipo=Religión&clase=fa fa-bell">
+                    <i class="fa fa-bell"></i>
+                    <em>Religi&oacute;n</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Salud&clase=fa fa-heart">
+                    <i class="fa fa-heart"></i>
+                    <em>Salud</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Servicios profesionales&clase=fa fa-briefcase">
+                    <i class="fa fa-briefcase"></i>
+                    <em>Servicios profesionales</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Talleres&clase=fa fa-wrench">
+                    <i class="fa fa-wrench"></i>
+                    <em>Talleres</em>
+                </a>
+                <a class="menu-item" href="page-uses-comer.html?tipo=Transporte&clase=fa fa-taxi">
+                    <i class="fa fa-taxi"></i>
+                    <em>Transporte</em>
+                </a>                                     
+            </div>
+            
+            
+            
+            <p class="sidebar-divider">Social</p>
+            
+            <div class="sidebar-menu">
+                <a class="menu-item" href="pageapp-login.html">
+                    <i class="fa fa-comments"></i>
+                    <em>Chat</em>
+                </a>  <a class="menu-item" href="https://www.facebook.com/240mediospublicitarios/">
+                    <i class="fa fa-facebook"></i>
+                    <em>Facebook</em>
+                </a>  </div>
+            
+            <p class="sidebar-divider">An&uacute;nciese con nosotros</p>
+            
+            <div class="sidebar-menu">
+                <a class="menu-item" href="tel:72628621">
+                    <i class="fa fa-phone"></i>
+                    <em>Ll&aacute;menos</em>
+                </a>                   
+                <a class="menu-item" href="sms:72628621">
+                    <i class="fa fa-comment-o"></i>
+                    <em>Env&iacute;enos un mensaje</em>
+                </a>                 
+                <a class="menu-item" href="mailto:info@240mediospublicitarios.com">
+                    <i class="fa fa-envelope-o"></i>
+                    <em>Escr&iacute;banos un correo</em>
+                </a>                     
+            </div>
+            
+            <p class="sidebar-footer">240 Medios Publicitarios &ndash; &copy; 2017 &ndash; 
+            <a href="page-about.html">M&aacute;s</a>
+            </p>
+            
+        </div>
+        
+     
+        <div id="content" class="snap-content">
+            <div class="content">
+            <div class="header-clear-large"></div>
+            <!--Page content goes here, fixed elements go above the all elements class-->  
+                
+                <div class="heading-style-1 container half-bottom">
+                    <a href="#"><i class="fa fa-ambulance"></i></a>
+                    <h4>Emergencias</h4>
+                    <div class="heading-block bg-240dark"></div>
+                    <div class="heading-decoration bg-240dark"></div>
+                </div>
+                
+                <div class="decoration"></div>
+                
+                
+                <div id="addEmergencies">
+                	<div class="preloader-logo"></div>
+                    
+                
+                    <!--<p class="user-list-socials">
+                        <strong>9-1-1<br><em>Emergencias</em></strong>
+                        <a href="#" class="icon1 sms-color"><i class="fa fa-phone"></i></a>
+                    </p>
+                    <div class="decoration"></div>                
+                    <p class="user-list-socials">
+                        <strong>Bomberos<br><em>Grecia</em></strong>
+                        <a href="#" class="icon1 sms-color"><i class="fa fa-phone"></i></a>
+                    </p>
+                    <div class="decoration"></div>                
+                    <p class="user-list-socials">
+                        <strong>Cruz Roja<br><em>Grecia</em></strong>
+                        <a href="#" class="icon1 sms-color"><i class="fa fa-phone"></i></a>
+                    </p>
+                    <div class="decoration"></div>                
+                    <p class="user-list-socials">
+                        <strong>Polic&iacute;a de Tr&aacute;nsito<br><em>Grecia</em></strong>
+                        <a href="#" class="icon1 sms-color"><i class="fa fa-phone"></i></a>
+                    </p>
+                    <div class="decoration"></div>-->
+                </div> 
+                <div class="simple-modal-content modal-content rounded-modal">
+                            <div class="header-clear"></div>
+                            <p class="center-text smaller-text" id="alertMessage">
+                                Mensaje de error.
+                            </p>
+                            <a href="#" class="button button-red button-small round-button modal-close button-center">Cerrar</a>
+                </div>
+                
+                <div class="footer">
+                    <p class="center-text">240 Medios Publicitarios &ndash; &copy; 2017 &ndash; 
+            <a href="page-about.html">M&aacute;s</a></p>
+                    <div class="footer-icons">
+                    <p class="center-text">
+                        <a href="https://www.facebook.com/240mediospublicitarios/" class="scale-hover facebook-color social-ball"><i class="fa fa-facebook"></i></a>
+                        
+                        <a href="#" class="scale-hover back-to-top bg-green-dark social-ball"><i class="fa fa-angle-up"></i></a>
+                        <a href="#" class="scale-hover show-share-bottom bg-magenta-dark social-ball"><i class="fa fa-share"></i></a>
+                        </p>
+                    </div>
+                </div>
+                                
+                
+                
+            <!-- End of entire page content-->
+            </div> 
+        </div>
+    </div>  
+    <a href="#" class="back-to-top-badge"><i class="fa fa-caret-up"></i>Ir arriba</a>
+</div>
+    
+    
+<!--Fly up share box and notifications go here -->
+<!--These are the only features that should be placed outside the all-elements class-->
+    
+<div class="share-bottom">
+    <h3>Compartir App</h3>
+    
+    <div class="share-socials-bottom">
+   
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://itunes.apple.com/us/app/grecia-240/id1328101625?mt=8">
+            <i class="fa fa-facebook facebook-color"></i>
+            Facebook
+        </a>
+        <a href="https://twitter.com/home?status=https://itunes.apple.com/us/app/grecia-240/id1328101625?mt=8">
+            <i class="fa fa-twitter twitter-color"></i>
+            Twitter
+        </a>
+        <a href="mailto:?&subject=Descargue Grecia 240&body=https://itunes.apple.com/us/app/grecia-240/id1328101625?mt=8">
+            <i class="fa fa-envelope-o mail-color"></i>
+            Correo
+        </a>
+        <div class="clear"></div>
+        
+    </div>
+    
+    <a href="#" class="close-share-bottom">Cerrar</a>
+</div>
+    
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

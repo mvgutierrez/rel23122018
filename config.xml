@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.mediospublicitarios.grecia240" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Grecia 240</name>
+    <description>
+        La guía informativa y directorio comercial más completo del cantón de Grecia.
+    </description>
+    <author email="info240mediospublicitarios@gmail.com" href="http://www.240mediospublicitarios.com">
+        240 Medios Publicitarios
+    </author>
+    <content src="launch.html" /> <!-- identificadorandroid launch.html-->
+    <access origin="*" />
+    <allow-intent href="tel:*" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+	<allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <engine name="android" spec="~7.0.0" />
+	<engine name="ios" spec="~4.5.4" />
+
+    <plugin name="cordova-plugin-geolocation" spec="^3.0.0" />
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+    </feature>
+	<feature name="Geolocation">
+    	<param name="ios-package" value="CDVLocation" />
+	</feature>
+	
+	<config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" mode="replace">
+    <string>Grecia 240 requiere su ubicación para encontrar los comercios cercanos.</string>
+	</config-file>
+	
+    <gap:config-file platform="android" parent="/manifest" mode="add">
+		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+		<uses-permission android:name="android.permission.INTERNET" />
+	</gap:config-file>
+	
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+		<!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+		<icon src="images/icono/android/mipmap-ldpi/ic_launcher.png" density="ldpi" />
+        <icon src="images/icono/android/mipmap-mdpi/ic_launcher.png" density="mdpi" />
+        <icon src="images/icono/android/mipmap-hdpi/ic_launcher.png" density="hdpi" />
+        <icon src="images/icono/android/mipmap-xhdpi/ic_launcher.png" density="xhdpi" />
+        <icon src="images/icono/android/mipmap-xxhdpi/ic_launcher.png" density="xxhdpi" />
+        <icon src="images/icono/android/mipmap-xxxhdpi/ic_launcher.png" density="xxxhdpi" />
+		
+		
+		
+    </platform>
+	<platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+		
+        <icon src="images/icono/ios/icons/Icon-App-20x20@1x.png" width="20" height="20" />
+		<icon src="images/icono/ios/icons/Icon-App-20x20@2x.png" width="40" height="40" />
+		<icon src="images/icono/ios/icons/Icon-App-20x20@3x.png" width="60" height="60" />
+		<icon src="images/icono/ios/icons/Icon-App-29x29@1x.png" width="29" height="29" />
+		<icon src="images/icono/ios/icons/Icon-App-29x29@2x.png" width="58" height="58" />
+		<icon src="images/icono/ios/icons/Icon-App-29x29@3x.png" width="87" height="87" />
+		<icon src="images/icono/ios/icons/Icon-App-40x40@1x.png" width="40" height="40" />
+		<icon src="images/icono/ios/icons/Icon-App-40x40@2x.png" width="80" height="80" />
+		<icon src="images/icono/ios/icons/Icon-App-40x40@3x.png" width="120" height="120" />
+		<icon src="images/icono/ios/icons/Icon-App-57x57@1x.png" width="57" height="57" />
+		<icon src="images/icono/ios/icons/Icon-App-57x57@2x.png" width="114" height="114" />
+		<icon src="images/icono/ios/icons/Icon-App-60x60@1x.png" width="60" height="60" />
+		<icon src="images/icono/ios/icons/Icon-App-60x60@2x.png.png" width="120" height="120" />
+		<icon src="images/icono/ios/icons/Icon-App-60x60@3x.png.png" width="180" height="180" />
+		<icon src="images/icono/ios/icons/Icon-App-72x72@1x.png" width="72" height="72" />
+		<icon src="images/icono/ios/icons/Icon-App-72x72@2x.png" width="144" height="144" />
+		<icon src="images/icono/ios/icons/Icon-App-76x76@1x.png" width="76" height="76" />
+		<icon src="images/icono/ios/icons/Icon-App-76x76@2x.png" width="152" height="152" />
+		<icon src="images/icono/ios/icons/Icon-App-76x76@3x.png" width="228" height="228" />
+		<icon src="images/icono/ios/icons/Icon-App-83.5x83.5@2x.png" width="167" height="167" />
+		<icon src="images/icono/ios/icons/Icon-Small-50x50@1x.png" width="50" height="50" />
+		<icon src="images/icono/ios/icons/Icon-Small-50x50@2x.png" width="100" height="100" />
+		<icon height="1024" width="1024" src="images/icono/ios/iTunesArtwork@2x.png" />
+		<splash src="images/splash/iphone66s7.png" width="750" height="1334"/>
+	<splash src="images/splash/iphonesinretina.png" width="320" height="480"/>
+	<splash src="images/splash/iphone5.png" width="320" height="568"/>
+	<splash src="images/splash/iphone52x.png" width="640" height="1136"/>
+	<splash src="images/splash/iphone44s55s.png" width="640" height="960"/>
+	<splash src="images/splash/iphonesplus.png" width="1242" height="2208"/>
+	<splash src="images/splash/ipadsinretina.png" width="768" height="1024"/>
+	<splash src="images/splash/ipadretina.png" width="1536" height="2048"/>
+		
+    </platform>
+	
+	<preference name="DisallowOverscroll" value="true"/>
+	<preference name="Orientation" value="portrait" />
+	<preference name="android-targetSdkVersion"  value="26" />
+	
+</widget>
